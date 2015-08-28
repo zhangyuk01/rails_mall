@@ -1,26 +1,14 @@
 <%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
-      <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
+  <table class="table table-hover table-striped">
+    <%= f.label :商品名%><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label :价格%><br>
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :num %><br>
+    <%= f.label :销售编号%><br>
     <%= f.number_field :num %>
   </div>
   <div class="actions">
