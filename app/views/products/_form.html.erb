@@ -12,6 +12,6 @@
     <%= f.number_field :num %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit nil,:data =>{:"disable-with" => "请稍等。。。"} %>
   </div>
 <% end %>
